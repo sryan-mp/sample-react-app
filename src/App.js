@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Product from "./Product"
+import products from "./utils/productList";
+import {ViewDetail} from './utils/analytics';
 
 function App() {
+  console.log(window.mParticle)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='main-heading'>
+        Living room furniture
+      </h1>
+      <div className="product-image-container">
+      {Object.keys(products).map(product => {        
+        return (<Product 
+        backgroundImage={products[product].image}
+        product={products[product]}
+        ViewDetail={ViewDetail}/>)
+      })}     
+      </div>
+      <div className="button-container">
+        <button className="register">proceed to checkout</button>
+      </div>
     </div>
   );
 }
