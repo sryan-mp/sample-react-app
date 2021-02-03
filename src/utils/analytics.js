@@ -1,6 +1,6 @@
 export function ViewDetail(product) {
     const mParticle = window.mParticle;
-    // Create a product object
+    // Create a product object    
     const productDetails = mParticle.eCommerce.createProduct(
       product.name,
       product.sku,
@@ -8,5 +8,5 @@ export function ViewDetail(product) {
       product.quantity
     );
     // Send details of viewed product to mParticle
-    mParticle.eCommerce.logProductAction(mParticle.ViewDetail, productDetails)
+    mParticle.eCommerce.logProductAction(mParticle.ProductActionType.ViewDetail, productDetails)
   }
