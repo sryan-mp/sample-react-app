@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a:hover {
@@ -8,24 +8,23 @@ a:hover {
 }
 
 .main-heading {
-  text-align: center;
+  text-align: center;  
 }
 
 .product-image-container {
-  width: 1000px;
-  height: 250px;
-  margin: 30px auto;
+  width: 700px;
+  height: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom:100px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .product-image {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border: 1px solid black;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   margin: 20px;
